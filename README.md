@@ -1,5 +1,21 @@
 # ARIS: Automated Research Ideation System
 
+An autonomous, multi-agent pipeline that uses AI to analyze academic literature, mathematically identify research gaps, and generate highly novel research proposals.
+
+## Table of Contents
+- [Why ARIS is Needed](#why-aris-is-needed)
+- [What is ARIS?](#what-is-aris)
+- [How it Works](#how-it-works)
+- [Key Features](#key-features)
+- [Architecture](#architecture)
+- [Quick Start Guide](#quick-start-guide)
+  - [Prerequisites](#prerequisites)
+  - [Installation (Ubuntu / Linux)](#installation-ubuntu--linux)
+  - [Installation (Windows)](#installation-windows)
+  - [Running the Application](#running-the-application)
+- [License](#license)
+
+
 ## Why ARIS is Needed
 Academic research often suffers from a severe bottleneck during the ideation phase. Researchers spend countless hours manually searching through literature, reading abstracts, and attempting to map out the boundary of human knowledge just to find a viable gap. Even after finding a gap, generating novel, structurally sound research ideas that haven't already been explored is a daunting task. ARIS was built to solve this problem by automating the literature review and ideation process, allowing researchers to focus on execution and experimentation rather than getting stuck in the literature phase.
 
@@ -25,42 +41,7 @@ The ARIS pipeline operates through a directed acyclic graph (DAG) of specialized
 * **Iterative Critic Loop:** Ideas are not just generated; they are rigorously evaluated for novelty and sent back for revision if they fail the threshold.
 * **Interactive UI:** A clean, responsive Streamlit interface that allows users to configure thresholds, model parameters, and monitor the pipeline execution in real-time.
 
-## Quick Start Guide
-
-### Prerequisites
-* Python 3.10 or higher
-* A Google Gemini API Key
-
-### Installation
-
-1. Clone the repository and navigate to the project directory:
-```bash
-git clone https://github.com/yourusername/aris.git
-cd aris
-```
-
-2. Install the required dependencies:
-```bash
-pip install -r requirements.txt
-```
-
-3. Set up your environment variables. Create a `.env` file in the root directory and add your API keys:
-```env
-GOOGLE_API_KEY=your_gemini_api_key_here
-# Optional: Semantic Scholar API Key for higher rate limits
-SEMANTIC_SCHOLAR_API_KEY=your_s2_api_key_here
-```
-
-### Running the Application
-
-Start the Streamlit interface by running the following command:
-```bash
-streamlit run app.py
-```
-
-This will launch the ARIS dashboard in your default web browser. From there, you can input your research topic, adjust parameters like the novelty threshold or maximum iterations, and start the automated ideation pipeline.
-
-## File Structure
+## File Structure 
 
 ```text
 aris/
@@ -92,6 +73,68 @@ aris/
     ├── embeddings.py          # Math for vector distance and semantic similarity
     └── clustering.py          # TF-IDF, K-Means, and Silhouette score logic
 ```
+
+## Quick Start Guide
+
+### Prerequisites
+* Python 3.10 or higher
+* A Google Gemini API Key
+
+### Installation (Ubuntu / Linux)
+
+1. Clone the repository and navigate to the project directory:
+```bash
+git clone https://github.com/yourusername/aris.git
+cd aris
+```
+
+2. Create a virtual environment and activate it:
+```bash
+python3 -m venv venv
+source venv/bin/activate
+```
+
+3. Install the required dependencies:
+```bash
+pip install -r requirements.txt
+```
+
+### Installation (Windows)
+
+1. Clone the repository and navigate to the project directory:
+```powershell
+git clone https://github.com/yourusername/aris.git
+cd aris
+```
+
+2. Create a virtual environment and activate it:
+```powershell
+python -m venv venv
+.\venv\Scripts\Activate.ps1
+```
+
+3. Install the required dependencies:
+```powershell
+pip install -r requirements.txt
+```
+
+### Configuration
+
+Set up your environment variables. Create a `.env` file in the root directory and add your API keys:
+```env
+GOOGLE_API_KEY=your_gemini_api_key_here
+# Optional: Semantic Scholar API Key for higher rate limits
+SEMANTIC_SCHOLAR_API_KEY=your_s2_api_key_here
+```
+
+### Running the Application
+
+Start the Streamlit interface by running the following command:
+```bash
+streamlit run app.py
+```
+
+This will launch the ARIS dashboard in your default web browser. From there, you can input your research topic, adjust parameters like the novelty threshold or maximum iterations, and start the automated ideation pipeline.
 
 ## License
 This project is licensed under the MIT License.
