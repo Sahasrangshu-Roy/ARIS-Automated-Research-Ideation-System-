@@ -84,8 +84,8 @@ aris/
 
 1. Clone the repository and navigate to the project directory:
 ```bash
-git clone https://github.com/yourusername/aris.git
-cd aris
+git clone https://github.com/Sahasrangshu-Roy/ARIS.git
+cd ARIS
 ```
 
 2. Create a virtual environment and activate it:
@@ -103,8 +103,8 @@ pip install -r requirements.txt
 
 1. Clone the repository and navigate to the project directory:
 ```powershell
-git clone https://github.com/yourusername/aris.git
-cd aris
+git clone https://github.com/Sahasrangshu-Roy/ARIS.git
+cd ARIS 
 ```
 
 2. Create a virtual environment and activate it:
