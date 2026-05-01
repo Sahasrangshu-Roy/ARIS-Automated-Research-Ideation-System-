@@ -137,4 +137,4 @@ streamlit run app.py
 This will launch the ARIS dashboard in your default web browser. From there, you can input your research topic, adjust parameters like the novelty threshold or maximum iterations, and start the automated ideation pipeline.
 
 ## License
-This project is licensed under the MIT License.
+This project is licensed under the [MIT License](LICENSE).
